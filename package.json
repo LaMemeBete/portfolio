@@ -20,8 +20,14 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "bootstrap": "^3.4.0",
     "core-js": "^2.5.4",
+    "ng2-animate-on-scroll": "^1.0.11",
+    "ngx-bootstrap": "^3.0.1",
+    "ngx-parallax": "^4.0.0",
+    "parallax-js": "^3.1.0",
     "rxjs": "^6.0.0",
+    "rxjs-compat": "^6.4.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

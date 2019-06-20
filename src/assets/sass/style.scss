@@ -1,0 +1,583 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Black.woff2') format('woff2'),
+  url('../fonts/Helvetica-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Oblique.woff2') format('woff2'),
+  url('../fonts/Helvetica-Oblique.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2'),
+  url('../fonts/Helvetica.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$mobile-width: 320px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
+  -webkit-animation-delay: #{$delay};
+  -webkit-animation-duration: #{$duration};
+  -webkit-animation-name: #{$animation};
+  -webkit-animation-fill-mode: #{$fillmode};
+  -webkit-animation-direction: #{$direction};
+
+  -moz-animation-delay: #{$delay};
+  -moz-animation-duration: #{$duration};
+  -moz-animation-name: #{$animation};
+  -moz-animation-fill-mode: #{$fillmode};
+  -moz-animation-direction: #{$direction};
+
+  animation-delay: #{$delay};
+  animation-duration: #{$duration};
+  animation-name: #{$animation};
+  animation-fill-mode: #{$fillmode};
+  animation-direction: #{$direction};
+}
+// -- Slide Animations -- //
+
+// Slide Out Top from Center
+@include keyframe(animation-slide-out-up) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(0,-100%);
+  }
+}
+
+@include keyframe(animation-slide-out-down) {
+  0% {
+    color: #fff;
+    text-shadow: none;
+    -ms-transform: rotateY(0deg) scale(1.7) translate(0,0);
+    -webkit-transform: rotateY(0deg) scale(1.7) translate(0,0);
+    transform: rotateY(0deg) scale(1.7) translate(0,0);
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@include keyframe(animation-slide-out-contact) {
+  0% {
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+// Slide Out Left from Center
+@include keyframe(animation-slide-out-left) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(-100%,0);
+  }
+}
+
+// Slide out Right from Center
+@include keyframe(skew-enlarge-out) {
+  0% {
+    color: #fff;
+    text-shadow: none;
+    -ms-transform: rotateY(0deg) scale(1.5);
+    -webkit-transform: rotateY(0deg) scale(1.5);
+    transform: rotateY(0deg) scale(1.5);
+  }
+
+  100% {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    -ms-transform: rotateY(-30deg) scale(1);
+    -webkit-transform: rotateY(-30deg) scale(1);
+    transform: rotateY(-30deg) scale(1);
+  }
+}
+@include keyframe(skew-enlarge-in) {
+  0% {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    -ms-transform: rotateY(-30deg) scale(1);
+    -webkit-transform: rotateY(-30deg) scale(1);
+    transform: rotateY(-30deg) scale(1);
+  }
+
+  30% {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    -ms-transform: rotateY(-30deg) scale(1);
+    -webkit-transform: rotateY(-30deg) scale(1);
+    transform: rotateY(-30deg) scale(1);
+  }
+
+  100% {
+    color: yellow;
+    text-shadow: none;
+    -ms-transform: rotateY(0deg) scale(1.5);
+    -webkit-transform: rotateY(0deg) scale(1.5);
+    transform: rotateY(0deg) scale(1.5);
+  }
+}
+
+
+@include keyframe(slide-left) {
+  0% {
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    -ms-transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    opacity: 0.6;
+  }
+
+  100% {
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Slide out Right from Center
+@include keyframe(animation-slide-out-right) {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(100%,0);
+  }
+}
+
+@include keyframe(scale-out) {
+  0% {
+    color: white;
+    text-shadow: none;
+    -ms-transform: rotateY(0deg) scale(1.5);
+    -webkit-transform: rotateY(0deg) scale(1.5);
+    transform: rotateY(0deg) scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    -ms-transform: rotateY(0deg) scale(1.5);
+    -webkit-transform: rotateY(0deg) scale(1.5);
+    transform: rotateY(0deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+@include keyframe(animation-slide-in-up) {
+  0% {
+    transform: translate(0,100%);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@include keyframe(animation-slide-in-down) {
+  0% {
+    transform: translate(0,-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+// Slide in Left to Center
+@include keyframe(animation-slide-in-left) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+// Slide in Right to Center
+@include keyframe(animation-slide-in-right) {
+  0% {
+    transform: translate(100%,0);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+@keyframes marquee {
+  0% {
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -ms-transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+.animation-slide-in-up{
+  @include animation(0, 0.5s, animation-slide-in-up, ease);
+}
+
+.animation-slide-in-down{
+  @include animation(0, 0.5s, animation-slide-in-down, ease);
+}
+
+.animation-slide-in-right{
+  @include animation(0, 0.5s, animation-slide-in-right, ease);
+}
+
+.animation-slide-in-left{
+  @include animation(0, 0.5s, animation-slide-in-left, ease);
+}
+
+.animation-slide-out-up{
+  @include animation(0, 0.5s, animation-slide-out-up, ease);
+}
+
+.animation-slide-out-down{
+  @include animation(0, 0.5s, animation-slide-out-down, ease);
+}
+
+.animation-slide-out-right{
+  @include animation(0, 0.5s, animation-slide-out-right, ease);
+}
+
+.animation-slide-out-left{
+  @include animation(0, 0.5s, animation-slide-out-left, ease);
+}
+.big-welcome-text {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.medium-welcome-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.underlined {
+  color: black;
+  flex: 1;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+  &:hover, {
+    background-size: 100% 100%;
+  }
+  &--thin {
+    background-image: linear-gradient(to right, black 0, black 100%);
+  }
+  &--thick {
+    background-position: 0 -0.1em;
+  }
+  &--offset {
+    background-position: 0 0.2em;
+    //didn't find another solution than mask the underline shape by a box shadow with the same color than the bg
+    box-shadow: inset 0 -.5em 0 0 white;
+  }
+  &--gradient {
+    background-position: 0 -0.1em;
+    background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+  }
+  &--reverse {
+    background-position: 100% -0.1em;
+    transition: background 1s; //yep, that's a long link
+    background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  }
+}
+.proj-list-attrib {
+  $elements: 12;
+  @for $i from 0 to $elements {
+    .star:nth-child(#{$i}) {
+      @include animation(0, 0.1s, scale-out, ease, forwards);
+      animation-duration: 0.7s;
+      animation-delay: #{$i*0.1}s;
+      //background-color: red;
+    }
+  }
+}
+.proj-list {
+  cursor: pointer;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  margin-top: 60px;
+  @include animation(0, 1s, animation-slide-in-down, ease);
+}
+.proj-name {
+  line-height: 65px;
+  padding-top: 40px;
+  -webkit-transform-style: preserve-3d;
+  pointer-events: none;
+}
+.cont-animation-welcome {
+  &:hover{
+    > .proj-name{
+      @include animation(0, 0.2s, skew-enlarge-in, ease, forwards);
+    }
+  }
+}
+.proj-name-hover {
+  @include animation(0, 1s, skew-enlarge-out, ease, forwards);
+}
+
+.proj-slide-out{
+  //pointer-events: auto !important;
+  @include animation(0, 10s, animation-slide-out-down, ease, forwards);
+}
+.contact-slide-out{
+  @include animation(0, 0.5s, animation-slide-out-contact, ease, forwards);
+}
+
+proj-name-bold{
+  color: #000;
+}
+.block-preview-show {
+  max-width: 50vw;
+  height: 100vh;
+  @include animation(0, 0.5s, animation-slide-in-left, ease, forwards);
+}
+.block-preview-hide {
+  max-width: 50vw;
+  height: 100vh;
+  @include animation(0, 0.5s, animation-slide-out-left, ease, forwards);
+}
+.menu-elem-cont {
+  &:nth-child(1){
+    @include animation(0, 0.5s, animation-slide-in-down, ease);
+  }
+}
+.marquee {
+  position: fixed;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 2em;
+  span {
+    padding: 10px;
+    display: inline-block;
+    padding-left: 100%;
+    //@include animation(0, 5s, marquee, linear, infinite);
+    animation: marquee 20s linear infinite;
+  }
+}
+/*.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}*/
+
+.marquee2 span {
+  animation-delay: 1s;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+.outline-text {
+  color: #fff;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+.image-portfolio {
+  width: 100%;
+  &:nth-child(1){
+    @include animation(0.2, 1s, animation-slide-in-down, ease);
+  }
+  &:nth-child(2){
+    @include animation(1, 1.4s, animation-slide-in-down, ease);
+  }
+  &:nth-child(3){
+    @include animation(0.6, 1.8s, animation-slide-in-down, ease);
+  }
+}
+.bg-yellow {
+  background-color: yellow;
+}
+.animate-cont-left {
+  @include animation(0, 1s, animation-slide-in-down, ease);
+}
+.btn-back{
+  padding-bottom: 20px;
+  cursor: pointer;
+  @include mobile {
+    width: 10vw;
+  }
+  @include desktop {
+    width: 3vw;
+  }
+  &:hover{
+    animation:slide-left 0.8s ease-in-out infinite;
+  }
+}
+.big-welcome-text-port {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 900;
+  color: #000000;
+  font-size: 2vw !important;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  @include mobile {
+    font-size: 9vw !important;
+  }
+
+  @include desktop {
+    font-size:2vw !important;
+  }
+}
+.hashtag{
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: yellow;
+  margin-bottom: 20px;
+}
+.counter{
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+#overlay-image{
+  //background-image: url("../../assets/img/city.gif");
+  background-size: contain;
+  height: 700px;
+  width: 700px;
+  position: fixed;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+
+}

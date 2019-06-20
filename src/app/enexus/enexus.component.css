@@ -1,0 +1,29 @@
+.dot {
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+@media (min-width: 320px) and (max-width: 1023px) {
+  .dot {
+    height: 3vw;
+    width: 3vw;
+  }
+}
+@media (min-width: 1024px) {
+  .dot {
+    height: 2vw;
+    width: 2vw;
+  }
+}
+
+.row.no-pad {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-pad > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=enexus.component.css.map */

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../assets/fonts/Helvetica-Black.woff2") format("woff2"), url("../../assets/fonts/Helvetica-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../assets/fonts/Helvetica-Oblique.woff2") format("woff2"), url("../../assets/fonts/Helvetica-Oblique.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../assets/fonts/Helvetica.woff2") format("woff2"), url("../../assets/fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.contact-info {
+  z-index: 1;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-family: "Helvetica", sans-serif;
+  font-style: normal;
+  display: inline-block;
+}
+.contact-info div:nth-child(1) {
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+}
+.contact-info div:nth-child(2) {
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+}
+.contact-info div:nth-child(3) {
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+}
+.contact-info div {
+  cursor: pointer;
+  margin-right: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+}
+.contact-info :first-child {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=welcome.component.css.map */
