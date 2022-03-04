@@ -9,4 +9,8 @@ import {slideInAnimation} from './route-animation';
 })
 export class AppComponent {
   title = 'mit-portfolio';
+  onActivate(event) {
+    console.log('activeee');
+    document.querySelector('body').scrollTo(0,0);
+  }
 }

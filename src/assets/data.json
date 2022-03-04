@@ -1,0 +1,185 @@
+[
+  {
+    "title": "BIASTUBE<br>BIDEN VS. TRUMP",
+    "preview": "../../assets/img/bt/bt-1.gif",
+    "tags": "#UserResearch #Angular #HTML #SASS #Firebase #design #front",
+    "text": "<p>This project explores whether it is possible to tell whether someone is a Trump or a Biden supporter simply by looking at their Youtube homepage. In an increasingly polarized society, we are prone to forming groups of co-occurring social identities and quickly judge someone from the opposing side. Everyday acts that scarcely registered as political in the past are now considered reliable clues about someone’s political group membership. Are we too quick to judge, or can we tell someone’s political leaning based on seemingly unrelated cues? Through an interactive experience, we wish to learn how we make assumptions about someone’s political leaning and raise awareness that we are sometimes too quick to judge someone’s identity.</p><p>Working in a multidisciplinary team at Cornell Tech (Federica Berra, Irene Font Peradejordi, Anton Abilov, Pablo Mahave) we built an an interactive experience that allows participants to guess whether a Youtube homepage belongs to a Trump or Biden supporter. Once the participant guesses a candidate, they can specify which video most influenced their decision. This allows us to collect data about which videos are more likely to associate a homepage with a political leaning.</p>",
+    "img": [
+      {"url": "../../assets/img/bt/bt-1.gif", "style": 1},
+      {"url": "../../assets/img/bt/bt-1.gif", "style": 1},
+      {"url": "../../assets/img/bt/bt-2.png", "style": 1},
+      {"url": "../../assets/img/bt/bt-3.png", "style": 1},
+      {"url": "../../assets/img/bt/bt-5.png", "style": 1},
+      {"url": "../../assets/img/bt/bt-4.png", "style": 1}
+    ]
+  },
+  {
+    "title": "OGILVY PARIS<br>INTRANET",
+    "preview": "../../assets/img/op/op-1.gif",
+    "tags": "#UserResearch #WP #HTML #SASS #design #front",
+    "text": "<p>We worked closely with Ogilvy Paris to build an internal website that helps employees stay up-to-date with Ogilvy. The website serves as a communications channel, knowledge management tool, and collaboration platform. In the process, we contacted multiple end-users to research the desired experience. We understood the basic functionalities that are expected to exist on the website, and with the help of multidisciplinary teams, we designed, built, and deployed it internally.</p>",
+    "img": [
+      {"url": "../../assets/img/op/op-1.gif", "style": 1},
+      {"url": "../../assets/img/op/op-1.gif", "style": 1},
+      {"url": "../../assets/img/op/op-2.gif", "style": 1},
+      {"url": "../../assets/img/op/op-3.gif", "style": 1},
+      {"url": "../../assets/img/op/op-4.gif", "style": 1},
+      {"url": "../../assets/img/op/op-4.gif", "style": 1}
+      
+    ]
+  },
+  {
+    "title": "CITY MAGAZINE<br> INTERNATIONAL",
+    "preview": "../../assets/img/city.gif",
+    "tags": "#react-native #Angular #Laravel #PHP #HTML #Python #HTML #SASS #Stripe",
+    "text": "<p>CITY MAGAZINE INTERNATIONAL is a vivid community of international urban lifestyle lovers, keen on cultural events, art, and trends all around the world.</p><p>CITY is a lifestyle magazine initially published bimestrially between 1984 and 1991. Since November 2018 the magazine is available again in multiple boutiques shops across Paris (The Conran Shop, Galeries Lafayette, and Ofr).</p><p>In addition to the magazine, the community of subscribers has access to a native city guide app with curated content from various capitals around the world (Paris, New York, Milano, London, Buenos Aires, Mexico City, Barcelona, and Lisbon), themed city walks and calendar of cultural events. CITY organizes as well cultural events exclusive to its community.</p><p>For this mission, we develop and maintain the back office of CITY, allowing the team to manage the content visible on the app, the app, and the commercial website enabling users to purchase and manage their subscriptions.</p>",
+    "img": [
+      {"url": "../../assets/img/city/4.jpg", "style": 2},
+      {"url": "../../assets/img/city/1.jpg", "style": 2},
+      {"url": "../../assets/img/city/2.jpg", "style": 2},
+      {"url": "../../assets/img/city/3.jpg", "style": 2},
+      {"url": "../../assets/img/city.gif", "style": 1},
+      {"url": "../../assets/img/city/city_2.gif", "style": 1},
+      {"url": "../../assets/img/city/city_1.gif", "style": 1},
+      {"url": "../../assets/img/city/city_3.gif", "style": 1},
+      {"url": "../../assets/img/city/city_4.jpg", "style": 1},
+      {"url": "../../assets/img/city/city_5.jpg", "style": 1}
+    ]
+  },
+  {
+    "title": "KWERK COWORKING<br> IN PARIS",
+    "preview": "../../assets/img/kwerk/kwerk_4.gif",
+    "tags": "#react-native #Angular #Laravel #PHP #e-signing #Stripe #HTML #SASS #SalesForce",
+    "text": "<p>Kwerk is an French company that provides shared workspaces for technology startup subculture communities, and services for entrepreneurs, freelancers, startups, small businesses and large enterprises.</p><p>Kwerk believes the workplace should no longer represent a costly burden for companies, but instead be seen as an investment and management tool capable of attracting, stimulating and retaining the best talent. With this in mind, it strives to enable individuals and businesses to flourish and to achieve their dreams through its unique and integrated expertise: Wellworking™. <i> Kwerk's website</i></p><p>For this project we develop and maintain the totality of the platform  allowing Kwerk  to manage and scale coworking workspaces: generate invoices, notify members and let them pay online, bookings, events, e-shops, community and social network.</p>",
+    "img": [
+      {"url": "../../assets/img/kwerk/kwerk_11.png", "style": 2},
+      {"url": "../../assets/img/kwerk/kwerk_12.png", "style": 2},
+      {"url": "../../assets/img/kwerk/kwerk_13.png", "style": 2},
+      {"url": "../../assets/img/kwerk/kwerk_14.png", "style": 2},
+      {"url": "../../assets/img/kwerk/kwerk_4.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_10.jpg", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_2.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_6.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_7.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_1.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_8.jpg", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_9.jpg", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_3.gif", "style": 1},
+      {"url": "../../assets/img/kwerk/kwerk_5.jpg", "style": 1}
+    ]
+  },
+  {
+    "title": "YAZBUKEY<br> MYSTERY CHESS",
+    "preview": "../../assets/img/yazbukey/yazbukey.gif",
+    "tags": "#Angular #HTML #SASS #CSS #front",
+    "text": "<p>Yazbukey is a French based fashion brand, blending surrealism, trompe l’oeil, and colorful cartoon chic, Yazbukey is a bold, singular presence in fashion. Daring accessories are the brand’s foundation, as is the trailblazing use of Plexiglass[...].<i>Yazbukey's website</i></p><p>Checkmate. For fall-winter 2017-2018 fashion week, Yazbukey unveiled a collection of graphic accessories, stamped with the iconic signature mouth. Pieces revealed day after day on an enigmatic chessboard.</p><p>For this project we developed the enigmatic chessboard creating for the user an immersive and intriguing digital experience through micro animations, bold colors, and mysterious videos.</p>",
+    "img": [
+      {"url": "../../assets/img/yazbukey/yazbukey.gif", "style": 1},
+      {"url": "../../assets/img/yazbukey/yaz_1.gif", "style": 1},
+      {"url": "../../assets/img/yazbukey/yaz_2.gif", "style": 1},
+      {"url": "../../assets/img/yazbukey/yaz_3.jpg", "style": 1},
+      {"url": "../../assets/img/yazbukey/yaz_4.png", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.jpg", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.png", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.jpg", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.png", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.jpg", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.png", "style": 2},
+      {"url": "../../assets/img/yazbukey/yaz_4.jpg", "style": 2}
+    ]
+  },
+  {
+    "title": "PERIODICK<br>GOOD REASON TO LOVE SCIENCE",
+    "preview": "../../assets/img/pd/pd-1.gif",
+    "tags": "#HTML #SASS #3d #design #front",
+    "text": "<p>Periodick was a (successful) attempt to design an interactive periodic table that makes you want to use it. Back when created in 2016, most online periodic tables were not responsive nor fun to use! Periodick was created to add a kick to my undergrad Chemistry classes.</p><a href='http://periodick.com.s3-website-us-east-1.amazonaws.com/'>Visit Periodick</a>",
+    "img": [
+      {"url": "../../assets/img/pd/pd-1.gif", "style": 1},
+      {"url": "../../assets/img/pd/pd-1.gif", "style": 1},
+      {"url": "../../assets/img/pd/pd-1.png", "style": 1},
+      {"url": "../../assets/img/pd/pd-5.png", "style": 1},
+      {"url": "../../assets/img/pd/pd-4.png", "style": 1},
+      {"url": "../../assets/img/pd/pd-3.png", "style": 1}
+      
+    ]
+  },
+  {
+    "title": "ETAM<br> FRENCH LIBERTÉ",
+    "preview": "../../assets/img/etam/etam.gif",
+    "tags": "#Angular #HTML #SASS #CSS #front #javascript",
+    "text": "<p>100 YEARS OF FRENCH LIBERTÉ. Etam is a French lingerie company that has accompanied women since 1916. 100 years of audacity, playfulness and French sexiness. 100 years of French Liberté.<i> Etam's website </i></p><p>For this mission, we developed a digital brand platform to spread the brand spirit within the worldwide creative network of Etam. Using vivid colors, short videos and a unique system of navigation we created a digital experience that invites the user to discover and learn more about the Etam's values and aesthetics.</p>",
+    "img": [
+      {"url": "../../assets/img/etam/etam_1.gif", "style": 3},
+      {"url": "../../assets/img/etam/etam_4.gif", "style": 1},
+      {"url": "../../assets/img/etam/etam_4.gif", "style": 1},
+      {"url": "../../assets/img/etam/etam_3.jpg", "style": 3}
+    ]
+  },
+  {
+    "title": "BUREAU FUTURE<br> ATELIER DIGITAL",
+    "preview": "../../assets/img/bf/bf_1.gif",
+    "tags": "#WordPress #HTML #SASS #CSS #javascript",
+    "text": "<p><p>In the early 1990s, Alexandre de Betak created Bureau Betak. His studios are located in New York, Paris, and Shanghai. Alexandre de Betak and his team design more than 800 models and produce events, shows and exhibitions for luxury brands, large or small, such as Christian Dior, Viktor & Rolf, Hussein Chalayan, Rodarte, The Row, Michael Kors Diane Von Furstenberg, Isabel Marant, H & M, Roberto Cavalli, John Galliano, Berluti, Peter Pilotto, Lacoste, Jason Wu, Mary Katrantzou, Jacquemus, Hermes, Kanye West, Visionary, Tiffany, Hugo Boss, Lanvin, Givenchy, Donna Karan, Céline, Sybilla, etc. He is the first to broadcast live on the internet Victoria's Secret show in the year 2000.</p><p>For this mission we created the commercial  website of Bureau Future, a department within Bureau Betak specializing in creating digital experiences for the various  luxury brands collaborating with Bureau Betak.</p></p>",
+    "img": [
+      {"url": "../../assets/img/bf/bf_1.gif", "style": 1},
+      {"url": "../../assets/img/bf/bf_2.gif", "style": 1},
+      {"url": "../../assets/img/bf/bf_5.png", "style": 1},
+      {"url": "../../assets/img/bf/bf_5.png", "style": 1}
+    ]
+  },
+  {
+    "title": "JE BOSSE<br> À LA DÉFENSE",
+    "preview": "../../assets/img/jbl/jbl_4.gif",
+    "tags": "#Angular #HTML #SASS #CSS #front #javascript",
+    "text": "<p>Kwerk is an French company that provides shared workspaces for technology startup subculture communities, and services for entrepreneurs, freelancers, startups, small businesses and large enterprises.</p><p>Kwerk believes the workplace should no longer represent a costly burden for companies, but instead be seen as an investment and management tool capable of attracting, stimulating and retaining the best talent. With this in mind, it strives to enable individuals and businesses to flourish and to achieve their dreams through its unique and integrated expertise: Wellworking™. <i> Kwerk's website</i></p><p>For this mission, we developed a digital platform dedicated to a special communication initiative for one of Kwerk centers, placed in the  Parisian business district La Defense. Through a set of playful short videos, Kwerk illustrates how fancy and appealing working at La Defense district is.</p>",
+    "img": [
+      {"url": "../../assets/img/jbl/jbl_1.gif", "style": 1},
+      {"url": "../../assets/img/jbl/jbl_6.gif", "style": 1},
+      {"url": "../../assets/img/jbl/jbl_4.gif", "style": 1},
+      {"url": "../../assets/img/jbl/jbl_2.gif", "style": 1},
+      {"url": "../../assets/img/jbl/jbl_3.gif", "style": 1},
+      {"url": "../../assets/img/jbl/jbl_5.gif", "style": 1}
+    ]
+  },
+  {
+    "title": "BUREAU BETAK<br> FASHION PRODUCTION",
+    "preview": "../../assets/img/bb/bf_3.gif",
+    "tags": "#WordPress #HTML #SASS #CSS #javascript",
+    "text": "<p>In the early 1990s, Alexandre de Betak created Bureau Betak. His current studios are located in New York, Paris, and Shanghai. Alexandre de Betak and his team design more than 800 models and produce events, shows and exhibitions for luxury brands, large or small, such as Christian Dior, Viktor & Rolf, Hussein Chalayan, Rodarte, The Row, Michael Kors Diane Von Furstenberg, Isabel Marant, H & M, Roberto Cavalli, John Galliano, Berluti, Peter Pilotto, Lacoste, Jason Wu, Mary Katrantzou, Jacquemus, Hermes, Kanye West, Visionary, Tiffany, Hugo Boss, Lanvin, Givenchy, Donna Karan, Céline, Sybilla, etc. He is the first to broadcast live on the internet Victoria's Secret show in the year 2000</p><p>For this mission we created a presentation in the form of a digital interface  showcasing  the different  skills and expertise of Bureau Betak</p>",
+    "img": [
+      {"url": "../../assets/img/bb/bb_1.gif", "style": 1},
+      {"url": "../../assets/img/bb/bf_3.gif", "style": 1},
+      {"url": "../../assets/img/bb/bf_4.gif", "style": 1},
+      {"url": "../../assets/img/bb/bb_2.gif", "style": 1},
+      {"url": "../../assets/img/bf/bf_1.gif", "style": 1},
+      {"url": "../../assets/img/bf/bf_2.gif", "style": 1}
+    ]
+  },
+  {
+    "title": "ENEXUS FINANCE<br> WITHIN AFRICA",
+    "preview": "../../assets/img/enexus/enexus_1.gif",
+    "tags": "#WordPress #HTML #SASS #CSS #javascript",
+    "text": "<p>Enexus finance provides M&amp;A and fundraising services to companies operating in Africa. We are building a network of regional boutiques in major African hubs to serve clients and connect markets throughout the continent. We identify opportunities and bring together the right partners to foster investments in and within Africa.<i>Enexus'</i></p><p>We worked together with Enexus to build the visual identity of the brand. Our delivery was a corporate, elegant website that embodies Enexus' values and services.</p>",
+    "img": [
+      {"url": "../../assets/img/enexus/enexus_1.gif", "style": 1},
+      {"url": "../../assets/img/enexus/enexus_2.gif", "style": 1},
+      {"url": "../../assets/img/enexus/enexus_4.png", "style": 3},
+      {"url": "../../assets/img/enexus/enexus_3.gif", "style": 1},
+      {"url": "../../assets/img/enexus/logo.png", "style": 1}
+    ]
+  },
+  {
+    "title": "ACCUEIL SMILE<br> E-LEARNING",
+    "preview": "../../assets/img/smile/smile_6.gif",
+    "tags": "#node #express #angular #sass #javascript #material #HTML",
+    "text": "<p>Accueil Smile is an e-learning platform dedicated to retail networks, allowing them to welcome customers / user with disabilities and special needs in a more inclusive way.</p><p>Though enriched content, videos and customized PDFs, each brand, organization or administration car shape its own training program to fit the customer experience it offers.</p><p>Accueil Smile also includes an online quiz to certify the level of the trainees.</p><p>Accueil Smile has been created with Tell Me The Truffe, France’s #1 communication agency dedicated to diversity, and Hangagés, a french association that unites major companies in France such as Burger King, FDJ (French Lottery) and Randstad.</p>",
+    "img": [
+      {"url": "../../assets/img/smile/smile_1.gif", "style": 1},
+      {"url": "../../assets/img/smile/smile_5.gif", "style": 1},
+      {"url": "../../assets/img/smile/smile_6.gif", "style": 1},
+      {"url": "../../assets/img/smile/smile_2.gif", "style": 1},
+      {"url": "../../assets/img/smile/smile_3.gif", "style": 1},
+      {"url": "../../assets/img/smile/smile_7.gif", "style": 1}
+    ]
+  }
+]

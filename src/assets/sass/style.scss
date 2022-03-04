@@ -85,6 +85,16 @@ $desktop-width: 1024px;
   }
 }
 
+@include keyframe(blinkpop) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @include keyframe(animation-slide-out-down) {
   0% {
     color: #fff;
@@ -128,6 +138,22 @@ $desktop-width: 1024px;
   }
 }
 
+@include keyframe(animation-slide-out-contact-down) {
+  0% {
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
 // Slide Out Left from Center
 @include keyframe(animation-slide-out-left) {
   0% {
@@ -159,6 +185,25 @@ $desktop-width: 1024px;
     -ms-transform: rotateY(-30deg) scale(1);
     -webkit-transform: rotateY(-30deg) scale(1);
     transform: rotateY(-30deg) scale(1);
+  }
+}
+@include keyframe(skew-enlarge-out-mobile) {
+  0% {
+    color: #fff;
+    text-shadow: none;
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    opacity: 1;
+    transform: translate(0,0);
   }
 }
 @include keyframe(skew-enlarge-in) {
@@ -247,6 +292,23 @@ $desktop-width: 1024px;
     opacity: 0;
   }
 }
+@include keyframe(scale-out-mobile) {
+  0% {
+    color: white;
+    text-shadow: none;
+    -ms-transform: rotateY(0deg) scale(1);
+    -webkit-transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    -ms-transform: rotateY(0deg) scale(1.1);
+    -webkit-transform: rotateY(0deg) scale(1.1);
+    transform: rotateY(0deg) scale(1.1);
+    opacity: 0;
+  }
+}
 
 
 @include keyframe(animation-slide-in-up) {
@@ -331,12 +393,28 @@ $desktop-width: 1024px;
   @include animation(0, 0.5s, animation-slide-out-left, ease);
 }
 .big-welcome-text {
+  -webkit-transform-style: preserve-3d;
+  pointer-events: none;
   font-family: 'Helvetica', sans-serif;
   font-weight: 900;
-  font-size: 5em;
   color: #000000;
-  text-align: center;
-  padding-bottom: 30px;
+  @include mobile {
+    font-size: 9vw;
+    text-align: left;
+    line-height: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    $elements: 12;
+  }
+
+  @include desktop {
+    font-size: 4vw;
+    text-align: center;
+    padding-bottom: 30px;
+    line-height: 65px;
+    padding-top: 40px;
+    @include animation(0, 1s, skew-enlarge-out, ease, forwards);
+  }
 }
 .medium-welcome-text {
   font-family: 'Open Sans', sans-serif;
@@ -395,35 +473,52 @@ $desktop-width: 1024px;
   $elements: 12;
   @for $i from 0 to $elements {
     .star:nth-child(#{$i}) {
-      @include animation(0, 0.1s, scale-out, ease, forwards);
-      animation-duration: 0.7s;
-      animation-delay: #{$i*0.1}s;
+      @include mobile {
+        @include animation(0, 0.1s, scale-out-mobile, ease, forwards);
+        animation-duration: 0.7s;
+        animation-delay: #{$i*0.1}s;
+      }
+      @include desktop {
+        @include animation(0, 0.1s, scale-out, ease, forwards);
+        animation-duration: 0.4s;
+        animation-delay: #{$i*0.1}s;
+      }
       //background-color: red;
     }
   }
 }
-.proj-list {
-  cursor: pointer;
-  -webkit-perspective: 600px;
-  perspective: 600px;
-  margin-top: 60px;
-  @include animation(0, 1s, animation-slide-in-down, ease);
-}
-.proj-name {
-  line-height: 65px;
-  padding-top: 40px;
-  -webkit-transform-style: preserve-3d;
-  pointer-events: none;
-}
-.cont-animation-welcome {
-  &:hover{
-    > .proj-name{
-      @include animation(0, 0.2s, skew-enlarge-in, ease, forwards);
-    }
+.star{
+  @include mobile {
+    padding: 0px 20px;
+    border-bottom: 1px solid yellow;
   }
 }
-.proj-name-hover {
-  @include animation(0, 1s, skew-enlarge-out, ease, forwards);
+.proj-list {
+  cursor: pointer;
+  @include mobile {
+    padding-top: 147px;
+    @for $i from 0 to $elements {
+      .star:nth-child(#{$i}) .big-welcome-text{
+          @include animation(0, 0.1s, skew-enlarge-out-mobile, ease, forwards);
+          animation-duration: 0.7s;
+          animation-delay: #{$i*0.1}s;
+      }
+    }
+  }
+  @include desktop {
+    @include animation(0, 1s, animation-slide-in-down, ease);
+  }
+}
+.cont-animation-welcome {
+  @include desktop {
+    perspective: 700px;
+    &:hover{
+      > .big-welcome-text{
+        @include animation(0, 0.2s, skew-enlarge-in, ease, forwards);
+      }
+    }
+  }
+
 }
 
 .proj-slide-out{
@@ -431,7 +526,13 @@ $desktop-width: 1024px;
   @include animation(0, 10s, animation-slide-out-down, ease, forwards);
 }
 .contact-slide-out{
-  @include animation(0, 0.5s, animation-slide-out-contact, ease, forwards);
+  @include mobile {
+    @include animation(0, 0.5s, animation-slide-out-contact-down, ease, forwards);
+  }
+  @include desktop {
+    @include animation(0, 0.5s, animation-slide-out-contact, ease, forwards);
+  }
+
 }
 
 proj-name-bold{
@@ -491,15 +592,25 @@ proj-name-bold{
   animation-delay: 1s;
 }
 .dot {
-  height: 25px;
-  width: 25px;
-  background-color: yellow;
-  border-radius: 50%;
-  display: inline-block;
+  @include mobile {
+    height: 15px;
+    width: 15px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  @include desktop {
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
 }
 .outline-text {
   color: #fff;
-  text-shadow:
+  c:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
@@ -543,7 +654,6 @@ p {
   font-family: 'Helvetica', sans-serif;
   font-weight: 900;
   color: #000000;
-  font-size: 2vw !important;
   text-align: left;
   margin-bottom: 20px;
   padding-bottom: 0px;
@@ -563,21 +673,256 @@ p {
 }
 .counter{
   font-family: 'Share Tech Mono', monospace;
-  font-size: 20px;
-  text-align: center;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
+  font-size: 20px;
+  @include desktop {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+  }
+
+  @include mobile {
+    position: initial;
+    text-align: right;
+    padding: 20px 0px;
+  }
 }
-#overlay-image{
-  //background-image: url("../../assets/img/city.gif");
-  background-size: contain;
-  height: 700px;
+.div-cont{
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: initial;
+  }
+  height: 100vh;
   width: 700px;
   position: fixed;
-  opacity: 0.4;
   top: 0;
   left: 0;
+  opacity: 0.4;
+  #overlay-image{
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+.logo-img{
+  max-width: 50px;
+}
+br {
+  @include mobile {
+    display: none;
+  }
 
+  @include desktop {
+    display: initial;
+  }
+}
+.me {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+.contact-info{
+  z-index: 1;
+  position: fixed;
+  font-family: 'Space Mono', monospace;
+  display: inline-block;
+  $elements: 3;
+  @for $i from 0 to $elements {
+    div:nth-child(#{$i + 1}) {
+      animation-duration: 0.3s;
+      animation-delay: #{$i*0.1}s;
+    }
+  }
+  div {
+    &:hover{
+      color: yellow;
+    }
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+
+    text-align: center;
+    @include mobile {
+      padding: 5px;
+    }
+    @include desktop {
+      padding: 20px;
+    }
+  }
+  @include mobile {
+    top: 10px;
+    left: 10px;
+    width: 100vw;
+    background-color: transparent;
+    color: black;
+  }
+
+  @include desktop {
+    bottom: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: white;
+  }
+}
+.oldschool {
+  color: white;
+  
+}
+
+.left-proj {
+  @include mobile {
+    width:100%;
+    height:auto;
+    background-color: black;
+    position: initial;
+    padding: 30px;
+    margin-top: 120px;
+  }
+
+  @include desktop {
+    width:30%;
+    height:100vh;
+    background-color: black;
+    position: fixed;
+    padding: 30px;
+  }
+
+}
+
+.left-proj-about {
+  @include mobile {
+    width:100%;
+    height:auto;
+    background-color: white;
+    position: initial;
+    padding: 30px;
+    margin-top: 100px;
+  }
+
+  @include desktop {
+    width:60%;
+    height:100vh;
+    background-color: white;
+    position: fixed;
+    padding: 30px;
+  }
+
+}
+
+.arrow-proj {
+  cursor: pointer;
+  @include mobile {
+    width:6vw;
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    width:2vw;
+    margin-bottom: 20px;
+  }
+
+}
+.slash-proj {
+  @include mobile {
+    width:4vw;
+    margin:0px 5px 0px 5px
+  }
+  @include desktop {
+    width:1vw;
+    margin:0px 5px 20px 5px
+  }
+
+}
+.header-proj-wrapper{
+  @include desktop {
+    position: initial;
+    width: initial;
+  }
+  @include mobile {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    padding: 30px 30px 0px 30px;
+    background-color: black;
+    z-index: 1;
+    border-bottom: 1px solid yellow;
+  }
+}
+.header-proj{
+  display: inline-block;
+  float: right;
+
+}
+.right-proj{
+  @include desktop {
+    width:70%;
+    position:absolute;
+    right:0;
+  }
+  @include mobile {
+    width:100%;
+    position:initial;
+  }
+}
+.right-proj-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  @include desktop {
+    width:40%;
+    position:absolute;
+    right:0;
+    height: 100%;
+  }
+  @include mobile {
+    width:100%;
+    position:initial;
+  }
+}
+.img-style-1{
+  width:50%;
+  display: inline-block !important;
+}
+.img-style-2{
+  width:25%;
+  display: inline-block !important;
+}
+.img-style-3{
+  width:100%;
+  display: inline-block !important;
+}
+html,body {
+  height:100%;
+}
+.blink-preloader{
+  background-color: yellow;
+  height: 100vh;
+}
+.hide-img{
+  opacity: 0;
+}
+.yellow-text {
+  color: yellow;
+}
+.highlight {
+  color: black;
+  background-color: yellow;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none !important;
 }

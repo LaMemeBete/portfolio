@@ -12,7 +12,7 @@ export class BackComponent implements OnInit {
 
   ngOnInit() {
   }
-  clickBack(elem) {
+  clickBack() {
     this.router.navigate(['./welcome']);
   }
 }

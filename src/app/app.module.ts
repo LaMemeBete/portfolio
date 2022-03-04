@@ -10,14 +10,13 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ElementComponent } from './element/element.component';
 
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
-import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
 import { KwerkComponent } from './kwerk/kwerk.component';
 import { SmileComponent } from './smile/smile.component';
 import { JblComponent } from './jbl/jbl.component';
 import { BackComponent } from './back/back.component';
 import { EnexusComponent } from './enexus/enexus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -29,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SmileComponent,
     JblComponent,
     BackComponent,
-    EnexusComponent
+    EnexusComponent,
+    AboutComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,8 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot(),
-    AnimateOnScrollModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

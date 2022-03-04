@@ -1,59 +1,28 @@
-<!--<div style="position: fixed; background-color: yellow; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 2em;">
-  <div>MOSHE BOROUCHOV</div>
-  <div>POTFOLIO</div>
-  <div>2018</div>
-</div>-->
-<div class="container-fluid" style="margin: 0 auto; width: 100%; padding: 0px;">
-  <!--<div style="position: fixed">
-    <img [ngClass]="(blockPreview==true)?'block-preview-show':'block-preview-hide'" src="{{this.srcGif}}"/>
-  </div>-->
-  <div id="overlay-image">
+<div class="container-fluid" style="padding: 0px">
+  <div class="div-cont">
+    <div class="animated" id="overlay-image"  [ngClass]="{'fadeInLeft': in,'fadeOutLeft': !in}"></div>
   </div>
-  <div class="contact-info ">
-    <div #refEl [ngClass]="{'contact-slide-out': click}">MOSHE BOROCKOV</div>
-    <div #refEl [ngClass]="{'contact-slide-out': click}">info@lamemebete.xyz</div>
-    <div #refEl [ngClass]="{'contact-slide-out': click}">+33 6 95 91 01 04</div>
+  <div class="contact-info">
+    <!--<div style="width: 126px; padding:0;" #refEl [ngClass]="{'contact-slide-out': click}">
+      <img style="width: 100%" src="../../assets/img/logo.png" />
+    </div>-->
+    <div [routerLink]="['/about']" class="oldschool" #refEl>
+      <span class="me">MOSHE BOROUCHOV</span>
+      <br>
+      ABOUT ME
+    </div>
+    <!--<div class="oldschool" #refEl><a href="mailto:info@lamemebete.xyz">info@lamemebete.xyz</a></div>-->
+    <!--<div class="oldschool" #refEl [ngClass]="{'contact-slide-out': click}">&#9679; Contact Us</div>-->
   </div>
   <div class="col-lg-offset-3">
     <div class="proj-list" [ngClass]="{'proj-list-attrib': click}">
-      <div class="star" [ngClass]="{'cont-animation-welcome': !click}" (click)="clickMenuItem('city')" (mouseenter)="mouseEnterLeave('../../assets/img/city.gif')"  (mouseleave)="mouseEnterLeave('')">
-        <div #refEl class="big-welcome-text proj-name proj-name-hover" #refEl >
-          <span class="dot"></span>
-          CITY MAGAZINE<br>INTERNATIONAL
-        </div>
-      </div>
-      <div class="star" [ngClass]="{'cont-animation-welcome': !click}" (click)="clickMenuItem('city')" (mouseenter)="mouseEnterLeave('../../assets/img/kwerk/kwerk_4.gif')"  (mouseleave)="mouseEnterLeave('')">
-        <div #refEl class="big-welcome-text proj-name proj-name-hover" #refEl >
-          <span class="dot"></span>
-          CITY MAGAZINE<br>INTERNATIONAL
-        </div>
-      </div>
-      <div class="star" [ngClass]="{'cont-animation-welcome': !click}" (click)="clickMenuItem('city')" (mouseenter)="mouseEnterLeave('../../assets/img/smile/smile_6.gif')"  (mouseleave)="mouseEnterLeave('')">
-        <div #refEl class="big-welcome-text proj-name proj-name-hover" #refEl >
-          <span class="dot"></span>
-          CITY MAGAZINE<br>INTERNATIONAL
-        </div>
-      </div>
-      <div class="star" [ngClass]="{'cont-animation-welcome': !click}" (click)="clickMenuItem('city')" (mouseenter)="mouseEnterLeave('../../assets/img/city.gif')"  (mouseleave)="mouseEnterLeave('')">
-        <div #refEl class="big-welcome-text proj-name proj-name-hover" #refEl >
-          <span class="dot"></span>
-          CITY MAGAZINE<br>INTERNATIONAL
+      <div *ngFor="let project of projects; let i = index" class="star" #refEl [ngClass]="{'cont-animation-welcome': !click}" (click)="clickMenuItem('project/'+(i+1))" (mouseenter)="mouseEnterLeave(project.preview, refEl)"  (mouseleave)="mouseEnterLeave('', refEl)">
+        <div #refEl class="big-welcome-text" >
+          <span class="dot" ></span>
+          <span style="padding-left: 5px;" [innerHTML]="project.title"></span>
         </div>
       </div>
     </div>
   </div>
+  <div id="distortion-text"></div>
 </div>
-
-<!--<div style="
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-">
-<p class="marquee">
-  <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
-</p>
-<p class="marquee marquee2">
-  <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
-</p>
-</div>-->

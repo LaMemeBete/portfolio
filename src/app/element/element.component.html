@@ -1,28 +1,18 @@
-<div class="animated fadeInDown" style="width:30%; height:100vh; background-color: black; position: fixed; padding: 30px;">
-  <app-back></app-back>
-  <div style="display: inline-block; float: right;">
-    <img style="width:2vw; margin-bottom: 20px" src="../../assets/img/left.svg"/>
-    <img style="width:1vw; margin:0px 5px 20px 5px" src="../../assets/img/slash.svg"/>
-    <img style="width:2vw; margin-bottom: 20px" src="../../assets/img/right.svg"/>
+<div *ngIf="!isLoading" id="left-proj" class="left-proj">
+  <div class="header-proj-wrapper">
+    <app-back></app-back>
+    <div class="header-proj">
+      <img [routerLink]="['/project' ,(id - 1)]" *ngIf="id != 1" class="arrow-proj" src="../../assets/img/left.svg"/>
+      <img *ngIf="id != 1 && id != projects.length" class="slash-proj" src="../../assets/img/slash.svg"/>
+      <img [routerLink]="['/project' ,(id + 1)]" *ngIf="id < projects.length" class="arrow-proj" src="../../assets/img/right.svg"/>
+    </div>
   </div>
-  <div class="hashtag">#react-native #angular #Laravel #PHP #HTML #SASS #Python</div>
-  <div style="color:white" class="big-welcome-text-port animated fadeIn">
-    CITY MAGAZINE<br>INTERNATIONAL
-  </div>
-  <p style="color:white">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Posuere sollicitudin aliquam ultrices sagittis. Adipiscing elit duis tristique sollicitudin.
-  </p>
-  <div class="counter">01</div>
+  <div class="hashtag animated fadeInDown">{{project.tags}}</div>
+  <div style="color:white" class="big-welcome-text-port animated fadeIn" [innerHTML]="project.title"></div>
+  <p class="animated fadeInDown" style="color:white" [innerHTML]="project.text"></p>
+  <div class="counter">{{id}}</div>
 </div>
-<div style="width:70%; position:absolute; right:0;">
-  <img animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:25%; display: inline-block" src="../../assets/img/city/4.jpg"/>
-  <img animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:25%; display: inline-block" src="../../assets/img/city/1.jpg"/>
-  <img animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:25%; display: inline-block" src="../../assets/img/city/2.jpg"/>
-  <img animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:25%; display: inline-block" src="../../assets/img/city/3.jpg"/>
-  <img animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block" src="../../assets/img/city.gif"/>
-  <img  animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block"  src="../../assets/img/city/city_2.gif"/>
-  <img  animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block" src="../../assets/img/city/city_1.gif"/>
-  <img  animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block" src="../../assets/img/city/city_3.gif"/>
-  <img  animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block" src="../../assets/img/city/city_4.jpg"/>
-  <img  animateOnScroll animationName="animated fadeIn" class="img-responsive" style="width:50%; display: inline-block" src="../../assets/img/city/city_5.jpg"/>
+<div *ngIf="!isLoading" class="right-proj" [ngClass]="{'blink-preloader animated fadeIn infinite': !showImages}"> 
+  <img (load)="updateCounter()" *ngFor="let img of project.img; let i = index" src="{{img.url}}" [ngClass]="{'img-style-1': img.style == 1, 'img-style-2': img.style == 2, 'img-style-3': img.style == 3, 'hide-img': !showImages}"/>
 </div>
+<div *ngIf="isLoading" [ngClass]="{'blink-preloader animated fadeIn infinite': !showImages}"></div>
